@@ -161,9 +161,10 @@ export class MarkdownEmitter {
         writer.write('```');
         writer.write(docFencedCode.language);
         writer.writeLine();
-        writer.write(docFencedCode.code);
+        writer.write(docFencedCode.code.trim());
         writer.writeLine();
         writer.writeLine('```');
+        writer.writeLine();
         break;
       }
       case DocNodeKind.Section: {
