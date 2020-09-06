@@ -475,7 +475,7 @@ export class MarkdownDocumenter {
 
     for (const apiMember of apiMembers) {
       const row: DocTableRow = new DocTableRow({ configuration }, [
-        this._createTitleCell(apiMember),
+        this._createTitleCell(apiMember, apiMember.kind === ApiItemKind.Function),
         this._createDescriptionCell(apiMember)
       ]);
 
@@ -871,7 +871,7 @@ export class MarkdownDocumenter {
     }
   }
 
-  private _createTitleCell(apiItem: ApiItem): DocTableCell {
+  private _createTitleCell(apiItem: ApiItem, ignoreFunctionParameters?: boolean): DocTableCell {
     const configuration: TSDocConfiguration = this._tsdocConfiguration;
 
     return new DocTableCell({ configuration }, [
@@ -879,7 +879,7 @@ export class MarkdownDocumenter {
         new DocLinkTag({
           configuration,
           tagName: '@link',
-          linkText: Utilities.getConciseSignature(apiItem),
+          linkText: ignoreFunctionParameters ? apiItem.displayName : Utilities.getConciseSignature(apiItem),
           urlDestination: this._getLinkFilenameForApiItem(apiItem)
         })
       ])
