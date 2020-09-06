@@ -1,10 +1,10 @@
 {
-  "name": "@microsoft/api-documenter",
-  "version": "7.8.41",
+  "name": "@easyops-cn/api-documenter",
+  "version": "7.8.42",
   "description": "Read JSON files from api-extractor, generate documentation pages",
   "repository": {
     "type": "git",
-    "url": "https://github.com/microsoft/rushstack/tree/master/apps/api-documenter"
+    "url": "https://github.com/easyops-cn/rushstack/tree/master/apps/api-documenter"
   },
   "homepage": "https://api-extractor.com/",
   "license": "MIT",
@@ -17,18 +17,18 @@
   "main": "lib/index.js",
   "typings": "dist/rollup.d.ts",
   "dependencies": {
-    "@microsoft/api-extractor-model": "workspace:*",
-    "@rushstack/node-core-library": "workspace:*",
-    "@rushstack/ts-command-line": "workspace:*",
+    "@microsoft/api-extractor-model": "~7.8.20",
+    "@rushstack/node-core-library": "~3.30.0",
+    "@rushstack/ts-command-line": "~4.6.4",
     "@microsoft/tsdoc": "0.12.19",
     "colors": "~1.2.1",
     "js-yaml": "~3.13.1",
     "resolve": "~1.17.0"
   },
   "devDependencies": {
-    "@microsoft/rush-stack-compiler-3.5": "workspace:*",
-    "@rushstack/eslint-config": "workspace:*",
-    "@rushstack/heft": "workspace:*",
+    "@microsoft/rush-stack-compiler-3.5": "~0.8.11",
+    "@rushstack/eslint-config": "~1.3.0",
+    "@rushstack/heft": "~0.10.3",
     "@types/heft-jest": "1.0.1",
     "@types/js-yaml": "3.12.1",
     "@types/node": "10.17.13",
