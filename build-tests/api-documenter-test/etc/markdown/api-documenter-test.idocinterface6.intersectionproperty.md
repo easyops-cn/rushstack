@@ -9,3 +9,4 @@
 ```typescript
 intersectionProperty: IDocInterface1 & IDocInterface2;
 ```
+

@@ -10,6 +10,7 @@
 ```typescript
 export declare function yamlReferenceUniquenessTest(): IDocInterface1;
 ```
+
 <b>Returns:</b>
 
 [IDocInterface1](./api-documenter-test.idocinterface1.md)

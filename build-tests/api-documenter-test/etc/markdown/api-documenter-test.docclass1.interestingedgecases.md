@@ -13,6 +13,7 @@ The regular expression used to validate the constraints is /^\[a-zA-Z0-9<!-- -->
 ```typescript
 interestingEdgeCases(): void;
 ```
+
 <b>Returns:</b>
 
 void

@@ -9,7 +9,7 @@ A top-level namespace
 <b>Signature:</b>
 
 ```typescript
-export declare namespace OuterNamespace 
+export declare namespace OuterNamespace
 ```
 
 ## Namespaces

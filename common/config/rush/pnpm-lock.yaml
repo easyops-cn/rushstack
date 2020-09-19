@@ -323,14 +323,14 @@ importers:
       z-schema: ~3.18.3
   ../../build-tests/api-documenter-test:
     devDependencies:
-      '@microsoft/api-documenter': 'link:../../apps/api-documenter'
+      '@easyops-cn/api-documenter': 'link:../../apps/api-documenter'
       '@microsoft/api-extractor': 'link:../../apps/api-extractor'
       '@types/jest': 25.2.1
       '@types/node': 10.17.13
       fs-extra: 7.0.1
       typescript: 3.9.7
     specifiers:
-      '@microsoft/api-documenter': 'workspace:*'
+      '@easyops-cn/api-documenter': 'workspace:*'
       '@microsoft/api-extractor': 'workspace:*'
       '@types/jest': 25.2.1
       '@types/node': 10.17.13
@@ -1517,7 +1517,7 @@ importers:
       glob: ~7.0.5
   ../../repo-scripts/doc-plugin-rush-stack:
     dependencies:
-      '@microsoft/api-documenter': 'link:../../apps/api-documenter'
+      '@easyops-cn/api-documenter': 'link:../../apps/api-documenter'
       '@microsoft/api-extractor-model': 'link:../../apps/api-extractor-model'
       '@microsoft/tsdoc': 0.12.19
       '@rushstack/node-core-library': 'link:../../libraries/node-core-library'
@@ -1529,7 +1529,7 @@ importers:
       '@types/js-yaml': 3.12.1
       '@types/node': 10.17.13
     specifiers:
-      '@microsoft/api-documenter': 'workspace:*'
+      '@easyops-cn/api-documenter': 'workspace:*'
       '@microsoft/api-extractor-model': 'workspace:*'
       '@microsoft/rush-stack-compiler-3.5': 'workspace:*'
       '@microsoft/tsdoc': 0.12.19
@@ -1541,11 +1541,11 @@ importers:
       js-yaml: ~3.13.1
   ../../repo-scripts/generate-api-docs:
     devDependencies:
-      '@microsoft/api-documenter': 'link:../../apps/api-documenter'
+      '@easyops-cn/api-documenter': 'link:../../apps/api-documenter'
       '@rushstack/eslint-config': 'link:../../stack/eslint-config'
       doc-plugin-rush-stack: 'link:../doc-plugin-rush-stack'
     specifiers:
-      '@microsoft/api-documenter': 'workspace:*'
+      '@easyops-cn/api-documenter': 'workspace:*'
       '@rushstack/eslint-config': 'workspace:*'
       doc-plugin-rush-stack: 'workspace:*'
   ../../repo-scripts/repo-toolbox:

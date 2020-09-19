@@ -9,7 +9,7 @@ Interface without inline tag to test custom TOC
 <b>Signature:</b>
 
 ```typescript
-export interface IDocInterface5 
+export interface IDocInterface5
 ```
 
 ## Properties

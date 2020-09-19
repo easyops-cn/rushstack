@@ -11,3 +11,4 @@ A variable exported from within a namespace.
 ```typescript
 nestedVariable: boolean
 ```
+

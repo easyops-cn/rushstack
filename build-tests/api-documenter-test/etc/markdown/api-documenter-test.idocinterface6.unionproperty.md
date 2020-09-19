@@ -9,3 +9,4 @@
 ```typescript
 unionProperty: IDocInterface1 | IDocInterface2;
 ```
+

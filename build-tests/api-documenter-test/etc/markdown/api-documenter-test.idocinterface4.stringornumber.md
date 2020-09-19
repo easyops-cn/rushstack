@@ -11,3 +11,4 @@ a union type
 ```typescript
 stringOrNumber: string | number;
 ```
+

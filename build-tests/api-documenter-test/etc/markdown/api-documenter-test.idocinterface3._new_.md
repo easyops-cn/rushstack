@@ -11,6 +11,7 @@ Construct signature
 ```typescript
 new (): IDocInterface1;
 ```
+
 <b>Returns:</b>
 
 [IDocInterface1](./api-documenter-test.idocinterface1.md)

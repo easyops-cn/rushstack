@@ -11,3 +11,4 @@ The simple constructor for `DocBaseClass`
 ```typescript
 constructor();
 ```
+

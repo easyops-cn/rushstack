@@ -11,3 +11,4 @@ A quoted identifier with redundant quotes.
 ```typescript
 "redundantQuotes": string;
 ```
+

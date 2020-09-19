@@ -9,3 +9,4 @@
 ```typescript
 arrayProperty: IDocInterface1[];
 ```
+

@@ -11,3 +11,4 @@ a union type with a function
 ```typescript
 numberOrFunction: number | (() => number);
 ```
+

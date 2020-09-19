@@ -19,7 +19,7 @@
       "allowedCategories": [ "libraries" ]
     },
     {
-      "name": "@microsoft/api-documenter",
+      "name": "@easyops-cn/api-documenter",
       "allowedCategories": [ "libraries", "tests" ]
     },
     {

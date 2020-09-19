@@ -11,3 +11,4 @@ Property of type number that does something
 ```typescript
 regularProperty: number;
 ```
+

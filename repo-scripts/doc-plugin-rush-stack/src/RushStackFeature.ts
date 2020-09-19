@@ -9,7 +9,7 @@ import {
   MarkdownDocumenterFeature,
   IMarkdownDocumenterFeatureOnBeforeWritePageArgs,
   IMarkdownDocumenterFeatureOnFinishedArgs
-} from '@microsoft/api-documenter';
+} from '@easyops-cn/api-documenter';
 
 interface INavigationNode {
   title: string;

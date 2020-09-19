@@ -11,3 +11,4 @@ This is a regular property that happens to use the SystemEvent type.
 ```typescript
 regularProperty: SystemEvent;
 ```
+

@@ -9,5 +9,6 @@ Interface that merges with class
 <b>Signature:</b>
 
 ```typescript
-export interface DocClassInterfaceMerge 
+export interface DocClassInterfaceMerge
 ```
+

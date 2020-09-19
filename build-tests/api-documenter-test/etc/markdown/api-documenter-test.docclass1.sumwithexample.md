@@ -36,8 +36,8 @@ Here's a simple example:
 ```
 // Prints "2":
 console.log(DocClass1.sumWithExample(1,1));
-
 ```
+
 
 ## Example 2
 
@@ -46,6 +46,6 @@ Here's an example with negative numbers:
 ```
 // Prints "0":
 console.log(DocClass1.sumWithExample(1,-1));
-
 ```
+
 

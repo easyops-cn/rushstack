@@ -10,7 +10,7 @@ Example base class
 <b>Signature:</b>
 
 ```typescript
-export declare class DocBaseClass 
+export declare class DocBaseClass
 ```
 
 ## Constructors

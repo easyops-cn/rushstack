@@ -10,3 +10,4 @@
 ```typescript
 export declare type GenericTypeAlias<T> = T[];
 ```
+

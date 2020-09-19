@@ -11,3 +11,4 @@ An identifier that does need quotes. It misleadingly looks like an ECMAScript sy
 ```typescript
 "[not.a.symbol]": string;
 ```
+

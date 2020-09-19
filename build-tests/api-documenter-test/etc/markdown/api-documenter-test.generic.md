@@ -9,5 +9,6 @@ Generic class.
 <b>Signature:</b>
 
 ```typescript
-export declare class Generic<T> 
+export declare class Generic<T>
 ```
+

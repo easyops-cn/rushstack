@@ -11,3 +11,4 @@ make sure html entities are escaped in tables.
 ```typescript
 generic: Generic<number>;
 ```
+

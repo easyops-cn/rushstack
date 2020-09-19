@@ -9,12 +9,12 @@ Namespace that merges with enum
 <b>Signature:</b>
 
 ```typescript
-export declare namespace DocEnumNamespaceMerge 
+export declare namespace DocEnumNamespaceMerge
 ```
 
 ## Functions
 
 |  Function | Description |
 |  --- | --- |
-|  [exampleFunction()](./api-documenter-test.docenumnamespacemerge.examplefunction.md) | This is a function inside of a namespace that merges with an enum. |
+|  [exampleFunction](./api-documenter-test.docenumnamespacemerge.examplefunction.md) | This is a function inside of a namespace that merges with an enum. |
 

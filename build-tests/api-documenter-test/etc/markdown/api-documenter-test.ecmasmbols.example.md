@@ -11,3 +11,4 @@ An ECMAScript symbol
 ```typescript
 example: unique symbol
 ```
+

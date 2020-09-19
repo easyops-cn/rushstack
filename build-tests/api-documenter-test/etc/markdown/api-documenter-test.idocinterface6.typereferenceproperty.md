@@ -9,3 +9,4 @@
 ```typescript
 typeReferenceProperty: Generic<IDocInterface1>;
 ```
+

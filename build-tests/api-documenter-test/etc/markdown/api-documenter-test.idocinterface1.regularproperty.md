@@ -11,3 +11,4 @@ Does something
 ```typescript
 regularProperty: SystemEvent;
 ```
+

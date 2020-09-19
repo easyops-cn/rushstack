@@ -11,3 +11,4 @@ Property of type string that does something
 ```typescript
 regularProperty: string;
 ```
+

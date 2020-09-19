@@ -11,3 +11,4 @@ ECMAScript symbol
 ```typescript
 [EcmaSmbols.example]: string;
 ```
+

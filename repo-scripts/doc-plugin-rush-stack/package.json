@@ -10,7 +10,7 @@
     "build": "heft test --clean"
   },
   "dependencies": {
-    "@microsoft/api-documenter": "workspace:*",
+    "@easyops-cn/api-documenter": "workspace:*",
     "@microsoft/api-extractor-model": "workspace:*",
     "@rushstack/node-core-library": "workspace:*",
     "@microsoft/tsdoc": "0.12.19",

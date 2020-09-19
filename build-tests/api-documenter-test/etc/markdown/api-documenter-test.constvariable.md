@@ -11,3 +11,4 @@ An exported variable declaration.
 ```typescript
 constVariable: number
 ```
+

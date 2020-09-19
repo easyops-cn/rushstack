@@ -26,11 +26,11 @@ if (process.argv.indexOf('--production') >= 0) {
 
 // Run the API Documenter command-line
 executeCommand(
-  'node node_modules/@microsoft/api-documenter/lib/start ' +
+  'node node_modules/@easyops-cn/api-documenter/lib/start ' +
     'generate --input-folder etc --output-folder etc/yaml'
 );
 executeCommand(
-  'node node_modules/@microsoft/api-documenter/lib/start ' +
+  'node node_modules/@easyops-cn/api-documenter/lib/start ' +
     'markdown --input-folder etc --output-folder etc/markdown'
 );
 

@@ -11,6 +11,7 @@ An example with tables:
 ```typescript
 tableExample(): void;
 ```
+
 <b>Returns:</b>
 
 void

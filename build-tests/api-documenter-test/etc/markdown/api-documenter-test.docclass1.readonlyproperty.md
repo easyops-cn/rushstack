@@ -9,3 +9,4 @@
 ```typescript
 get readonlyProperty(): string;
 ```
+

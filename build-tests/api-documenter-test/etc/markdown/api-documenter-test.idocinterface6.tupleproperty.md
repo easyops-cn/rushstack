@@ -9,3 +9,4 @@
 ```typescript
 tupleProperty: [IDocInterface1, IDocInterface2];
 ```
+

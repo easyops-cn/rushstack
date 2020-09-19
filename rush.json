@@ -422,7 +422,7 @@
     //
     // "apps" folder (alphabetical order)
     {
-      "packageName": "@microsoft/api-documenter",
+      "packageName": "@easyops-cn/api-documenter",
       "projectFolder": "apps/api-documenter",
       "reviewCategory": "libraries",
       "shouldPublish": true

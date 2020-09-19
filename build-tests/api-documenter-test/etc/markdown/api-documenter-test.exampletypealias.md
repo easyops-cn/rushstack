@@ -11,3 +11,4 @@ A type alias
 ```typescript
 export declare type ExampleTypeAlias = Promise<boolean>;
 ```
+

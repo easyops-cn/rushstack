@@ -9,12 +9,12 @@ A nested namespace
 <b>Signature:</b>
 
 ```typescript
-namespace InnerNamespace 
+namespace InnerNamespace
 ```
 
 ## Functions
 
 |  Function | Description |
 |  --- | --- |
-|  [nestedFunction(x)](./api-documenter-test.outernamespace.innernamespace.nestedfunction.md) | A function inside a namespace |
+|  [nestedFunction](./api-documenter-test.outernamespace.innernamespace.nestedfunction.md) | A function inside a namespace |
 

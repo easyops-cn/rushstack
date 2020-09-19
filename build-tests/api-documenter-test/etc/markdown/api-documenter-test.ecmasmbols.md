@@ -9,7 +9,7 @@ A namespace containing an ECMAScript symbol
 <b>Signature:</b>
 
 ```typescript
-export declare namespace EcmaSmbols 
+export declare namespace EcmaSmbols
 ```
 
 ## Variables
