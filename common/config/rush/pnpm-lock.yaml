@@ -108,6 +108,7 @@ importers:
       glob: 7.0.6
       glob-escape: 0.0.2
       jest-snapshot: 25.4.0
+      prettier: 2.1.1
       semver: 7.3.2
       tapable: 1.1.3
       true-case-path: 2.2.1
@@ -152,6 +153,7 @@ importers:
       glob: ~7.0.5
       glob-escape: ~0.0.2
       jest-snapshot: ~25.4.0
+      prettier: ~2.1.1
       semver: ~7.3.0
       tapable: 1.1.3
       true-case-path: ~2.2.1
@@ -207,32 +209,13 @@ importers:
       colors: ~1.2.1
       semver: ~7.3.0
       sinon: ~1.17.3
-  ../../apps/rush-buildxl:
-    dependencies:
-      '@microsoft/rush-lib': 'link:../rush-lib'
-      '@rushstack/node-core-library': 'link:../../libraries/node-core-library'
-      '@rushstack/ts-command-line': 'link:../../libraries/ts-command-line'
-    devDependencies:
-      '@microsoft/rush-stack-compiler-3.5': 'link:../../stack/rush-stack-compiler-3.5'
-      '@rushstack/eslint-config': 'link:../../stack/eslint-config'
-      '@rushstack/heft': 'link:../heft'
-      '@types/heft-jest': 1.0.1
-      '@types/node': 10.17.13
-    specifiers:
-      '@microsoft/rush-lib': 'workspace:*'
-      '@microsoft/rush-stack-compiler-3.5': 'workspace:*'
-      '@rushstack/eslint-config': 'workspace:*'
-      '@rushstack/heft': 'workspace:*'
-      '@rushstack/node-core-library': 'workspace:*'
-      '@rushstack/ts-command-line': 'workspace:*'
-      '@types/heft-jest': 1.0.1
-      '@types/node': 10.17.13
   ../../apps/rush-lib:
     dependencies:
       '@pnpm/link-bins': 5.3.12
       '@rushstack/node-core-library': 'link:../../libraries/node-core-library'
       '@rushstack/package-deps-hash': 'link:../../libraries/package-deps-hash'
       '@rushstack/stream-collator': 'link:../../libraries/stream-collator'
+      '@rushstack/terminal': 'link:../../libraries/terminal'
       '@rushstack/ts-command-line': 'link:../../libraries/ts-command-line'
       '@yarnpkg/lockfile': 1.0.2
       builtin-modules: 3.1.0
@@ -248,7 +231,7 @@ importers:
       jszip: 3.5.0
       lodash: 4.17.20
       minimatch: 3.0.4
-      node-fetch: 2.1.2
+      node-fetch: 2.6.1
       npm-package-arg: 6.1.1
       npm-packlist: 2.1.2
       read-package-tree: 5.1.6
@@ -291,6 +274,7 @@ importers:
       '@rushstack/node-core-library': 'workspace:*'
       '@rushstack/package-deps-hash': 'workspace:*'
       '@rushstack/stream-collator': 'workspace:*'
+      '@rushstack/terminal': 'workspace:*'
       '@rushstack/ts-command-line': 'workspace:*'
       '@types/glob': 7.1.1
       '@types/heft-jest': 1.0.1
@@ -325,7 +309,7 @@ importers:
       jszip: ~3.5.0
       lodash: ~4.17.15
       minimatch: ~3.0.2
-      node-fetch: ~2.1.2
+      node-fetch: ~2.6.1
       npm-package-arg: ~6.1.0
       npm-packlist: ~2.1.2
       read-package-tree: ~5.1.5
@@ -1453,7 +1437,8 @@ importers:
       ts-jest: ~25.1.0
   ../../libraries/stream-collator:
     dependencies:
-      colors: 1.2.5
+      '@rushstack/node-core-library': 'link:../node-core-library'
+      '@rushstack/terminal': 'link:../terminal'
     devDependencies:
       '@microsoft/rush-stack-compiler-3.5': 'link:../../stack/rush-stack-compiler-3.5'
       '@rushstack/eslint-config': 'link:../../stack/eslint-config'
@@ -1464,6 +1449,25 @@ importers:
       '@microsoft/rush-stack-compiler-3.5': 'workspace:*'
       '@rushstack/eslint-config': 'workspace:*'
       '@rushstack/heft': 'workspace:*'
+      '@rushstack/node-core-library': 'workspace:*'
+      '@rushstack/terminal': 'workspace:*'
+      '@types/heft-jest': 1.0.1
+      '@types/node': 10.17.13
+  ../../libraries/terminal:
+    dependencies:
+      '@types/node': 10.17.13
+    devDependencies:
+      '@microsoft/rush-stack-compiler-3.5': 'link:../../stack/rush-stack-compiler-3.5'
+      '@rushstack/eslint-config': 'link:../../stack/eslint-config'
+      '@rushstack/heft': 'link:../../apps/heft'
+      '@rushstack/node-core-library': 'link:../node-core-library'
+      '@types/heft-jest': 1.0.1
+      colors: 1.2.5
+    specifiers:
+      '@microsoft/rush-stack-compiler-3.5': 'workspace:*'
+      '@rushstack/eslint-config': 'workspace:*'
+      '@rushstack/heft': 'workspace:*'
+      '@rushstack/node-core-library': 'workspace:*'
       '@types/heft-jest': 1.0.1
       '@types/node': 10.17.13
       colors: ~1.2.1
@@ -9642,12 +9646,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-ibPK3iA+vaY1eEjESkQkM0BbCqFOaZMiXRTtdB0u7b4djtY6JnsjvPdUHVMg6xQt3B8fpTTWHI9A+ADjM9frzg==
-  /node-fetch/2.1.2:
+  /node-fetch/2.6.1:
     dev: false
     engines:
       node: 4.x || >=6.0.0
     resolution:
-      integrity: sha1-q4hOjn5X44qUR1POxwb3iNF2i7U=
+      integrity: sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
   /node-forge/0.7.6:
     dev: false
     resolution:
@@ -10621,6 +10625,13 @@ packages:
       node: '>= 0.8.0'
     resolution:
       integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
+  /prettier/2.1.1:
+    dev: false
+    engines:
+      node: '>=10.13.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-9bY+5ZWCfqj3ghYBLxApy2zf6m+NJo5GzmLTpr9FsApsfjriNnS2dahWReHMi7qNPhhHl9SYHJs2cHZLgexNIw==
   /pretty-error/2.1.1:
     dependencies:
       renderkid: 2.0.3

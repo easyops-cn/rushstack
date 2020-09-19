@@ -16,7 +16,7 @@
    * path segment in the "$schema" field for all your Rush config files.  This will ensure
    * correct error-underlining and tab-completion for editors such as VS Code.
    */
-  "rushVersion": "5.33.2",
+  "rushVersion": "5.34.0-pr2172.0",
 
   /**
    * The next field selects which package manager should be installed and determines its version.
@@ -461,12 +461,6 @@
       "versionPolicyName": "rush"
     },
     {
-      "packageName": "@microsoft/rush-buildxl",
-      "projectFolder": "apps/rush-buildxl",
-      "reviewCategory": "libraries",
-      "versionPolicyName": "rush"
-    },
-    {
       "packageName": "@microsoft/rush-lib",
       "projectFolder": "apps/rush-lib",
       "reviewCategory": "libraries",
@@ -842,6 +836,12 @@
     {
       "packageName": "@rushstack/stream-collator",
       "projectFolder": "libraries/stream-collator",
+      "reviewCategory": "libraries",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@rushstack/terminal",
+      "projectFolder": "libraries/terminal",
       "reviewCategory": "libraries",
       "shouldPublish": true
     },

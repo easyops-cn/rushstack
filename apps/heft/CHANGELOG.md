@@ -1,6 +1,78 @@
 # Change Log - @rushstack/heft
 
-This log was last generated on Sat, 05 Sep 2020 18:56:35 GMT and should not be manually modified.
+This log was last generated on Fri, 18 Sep 2020 22:57:24 GMT and should not be manually modified.
+
+## 0.13.4
+Fri, 18 Sep 2020 22:57:24 GMT
+
+### Patches
+
+- Fix an issue where folders listed in pathsToDelete in clean.json weren't deleted on Windows.
+
+## 0.13.3
+Fri, 18 Sep 2020 21:49:53 GMT
+
+### Patches
+
+- Add a missing field to the template config files.
+- Fix an issue where, if an "extends" field pointed to a module that didn't exist, the error was silently ignored.
+
+## 0.13.2
+Wed, 16 Sep 2020 05:30:25 GMT
+
+### Patches
+
+- Add missing "extends" properties to schemas.
+- Fix an issue where console.log() did not get formatted by HeftJestReporter
+
+## 0.13.1
+Tue, 15 Sep 2020 01:51:37 GMT
+
+### Patches
+
+- Improve reliability of jest-build-transform.js by only comparing timestamps when in "--watch" mode
+
+## 0.13.0
+Mon, 14 Sep 2020 15:09:48 GMT
+
+### Minor changes
+
+- Enable support for Jest inline snapshots
+
+## 0.12.0
+Sun, 13 Sep 2020 01:53:20 GMT
+
+### Minor changes
+
+- Update plugins to load configuration via heft-configuration-loader instead of in central plugins.
+- Remove the loading of common/config/heft/* config files.
+- (BREAKING CHANGE) Rename the "outFolderPath" and "emitFolderPathForJest" properties in typescript.json to "outFolderName" and "emitFolderNameForJest"
+
+## 0.11.1
+Fri, 11 Sep 2020 02:13:35 GMT
+
+*Version update only*
+
+## 0.11.0
+Wed, 09 Sep 2020 03:29:01 GMT
+
+### Minor changes
+
+- Add --max-workers option to the "test" action to control the maximum number of worker processes the test process can use.
+
+## 0.10.5
+Wed, 09 Sep 2020 00:38:48 GMT
+
+### Patches
+
+- Fix a typo in an error message to read that plugins must define a "pluginName" property, rather than the former "displayName" property
+
+## 0.10.4
+Mon, 07 Sep 2020 07:37:37 GMT
+
+### Patches
+
+- Fix an issue with WebpackPlugin loading webpack-dev-server in non-serve mode and setting the "WEBPACK_DEV_SERVER" environment variable.
 
 ## 0.10.3
 Sat, 05 Sep 2020 18:56:35 GMT

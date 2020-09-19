@@ -1,6 +1,58 @@
 # Change Log - @rushstack/typings-generator
 
-This log was last generated on Sat, 05 Sep 2020 18:56:35 GMT and should not be manually modified.
+This log was last generated on Fri, 18 Sep 2020 22:57:24 GMT and should not be manually modified.
+
+## 0.2.5
+Fri, 18 Sep 2020 22:57:24 GMT
+
+*Version update only*
+
+## 0.2.4
+Fri, 18 Sep 2020 21:49:54 GMT
+
+*Version update only*
+
+## 0.2.3
+Wed, 16 Sep 2020 05:30:26 GMT
+
+*Version update only*
+
+## 0.2.2
+Tue, 15 Sep 2020 01:51:37 GMT
+
+*Version update only*
+
+## 0.2.1
+Mon, 14 Sep 2020 15:09:49 GMT
+
+*Version update only*
+
+## 0.2.0
+Sun, 13 Sep 2020 01:53:20 GMT
+
+### Minor changes
+
+- Change TypingsGenerator to support async methods. Typings generation now returns a promise.
+
+## 0.1.52
+Fri, 11 Sep 2020 02:13:35 GMT
+
+*Version update only*
+
+## 0.1.51
+Wed, 09 Sep 2020 03:29:01 GMT
+
+*Version update only*
+
+## 0.1.50
+Wed, 09 Sep 2020 00:38:48 GMT
+
+*Version update only*
+
+## 0.1.49
+Mon, 07 Sep 2020 07:37:37 GMT
+
+*Version update only*
 
 ## 0.1.48
 Sat, 05 Sep 2020 18:56:35 GMT

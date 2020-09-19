@@ -2,6 +2,183 @@
   "name": "@microsoft/gulp-core-build-serve",
   "entries": [
     {
+      "version": "3.7.59",
+      "tag": "@microsoft/gulp-core-build-serve_v3.7.59",
+      "date": "Fri, 18 Sep 2020 22:57:24 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@microsoft/gulp-core-build\" to `3.16.23`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/node-core-library\" to `3.33.1`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/debug-certificate-manager\" to `0.2.59`"
+          },
+          {
+            "comment": "Updating dependency \"@microsoft/rush-stack-compiler-3.5\" to `0.8.16`"
+          },
+          {
+            "comment": "Updating dependency \"@microsoft/node-library-build\" to `6.4.47`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/eslint-config\" to `1.4.0`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "3.7.58",
+      "tag": "@microsoft/gulp-core-build-serve_v3.7.58",
+      "date": "Fri, 18 Sep 2020 21:49:53 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@microsoft/gulp-core-build\" to `3.16.22`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/node-core-library\" to `3.33.0`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/debug-certificate-manager\" to `0.2.58`"
+          },
+          {
+            "comment": "Updating dependency \"@microsoft/rush-stack-compiler-3.5\" to `0.8.15`"
+          },
+          {
+            "comment": "Updating dependency \"@microsoft/node-library-build\" to `6.4.46`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "3.7.57",
+      "tag": "@microsoft/gulp-core-build-serve_v3.7.57",
+      "date": "Wed, 16 Sep 2020 05:30:26 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@rushstack/debug-certificate-manager\" to `0.2.57`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "3.7.56",
+      "tag": "@microsoft/gulp-core-build-serve_v3.7.56",
+      "date": "Tue, 15 Sep 2020 01:51:37 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@rushstack/debug-certificate-manager\" to `0.2.56`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "3.7.55",
+      "tag": "@microsoft/gulp-core-build-serve_v3.7.55",
+      "date": "Mon, 14 Sep 2020 15:09:48 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@rushstack/debug-certificate-manager\" to `0.2.55`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "3.7.54",
+      "tag": "@microsoft/gulp-core-build-serve_v3.7.54",
+      "date": "Sun, 13 Sep 2020 01:53:20 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@rushstack/debug-certificate-manager\" to `0.2.54`"
+          },
+          {
+            "comment": "Updating dependency \"@microsoft/rush-stack-compiler-3.5\" to `0.8.14`"
+          },
+          {
+            "comment": "Updating dependency \"@microsoft/node-library-build\" to `6.4.45`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "3.7.53",
+      "tag": "@microsoft/gulp-core-build-serve_v3.7.53",
+      "date": "Fri, 11 Sep 2020 02:13:35 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@microsoft/gulp-core-build\" to `3.16.21`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/node-core-library\" to `3.32.0`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/debug-certificate-manager\" to `0.2.53`"
+          },
+          {
+            "comment": "Updating dependency \"@microsoft/rush-stack-compiler-3.5\" to `0.8.13`"
+          },
+          {
+            "comment": "Updating dependency \"@microsoft/node-library-build\" to `6.4.44`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "3.7.52",
+      "tag": "@microsoft/gulp-core-build-serve_v3.7.52",
+      "date": "Wed, 09 Sep 2020 03:29:01 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@rushstack/debug-certificate-manager\" to `0.2.52`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "3.7.51",
+      "tag": "@microsoft/gulp-core-build-serve_v3.7.51",
+      "date": "Wed, 09 Sep 2020 00:38:48 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@rushstack/debug-certificate-manager\" to `0.2.51`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "3.7.50",
+      "tag": "@microsoft/gulp-core-build-serve_v3.7.50",
+      "date": "Mon, 07 Sep 2020 07:37:37 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@microsoft/gulp-core-build\" to `3.16.20`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/node-core-library\" to `3.31.0`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/debug-certificate-manager\" to `0.2.50`"
+          },
+          {
+            "comment": "Updating dependency \"@microsoft/rush-stack-compiler-3.5\" to `0.8.12`"
+          },
+          {
+            "comment": "Updating dependency \"@microsoft/node-library-build\" to `6.4.43`"
+          }
+        ]
+      }
+    },
+    {
       "version": "3.7.49",
       "tag": "@microsoft/gulp-core-build-serve_v3.7.49",
       "date": "Sat, 05 Sep 2020 18:56:35 GMT",

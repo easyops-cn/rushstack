@@ -1,6 +1,33 @@
 # Change Log - @rushstack/node-core-library
 
-This log was last generated on Thu, 27 Aug 2020 11:27:06 GMT and should not be manually modified.
+This log was last generated on Fri, 18 Sep 2020 22:57:25 GMT and should not be manually modified.
+
+## 3.33.1
+Fri, 18 Sep 2020 22:57:25 GMT
+
+*Version update only*
+
+## 3.33.0
+Fri, 18 Sep 2020 21:49:53 GMT
+
+### Minor changes
+
+- Add a missing "existsAsync" function to the FileSystem API.
+
+## 3.32.0
+Fri, 11 Sep 2020 02:13:35 GMT
+
+### Minor changes
+
+- Add Text.getNewline() and FileWriter.filePath
+- Add Brand API
+
+## 3.31.0
+Mon, 07 Sep 2020 07:37:37 GMT
+
+### Minor changes
+
+- Replace Colors.normalizeColorTokensForTest() (which was marked as "beta") with AnsiEscape.formatForTests()
 
 ## 3.30.0
 Thu, 27 Aug 2020 11:27:06 GMT

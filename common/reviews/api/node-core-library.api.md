@@ -21,6 +21,17 @@ export class AlreadyReportedError extends Error {
     constructor();
 }
 
+// @public
+export class AnsiEscape {
+    static formatForTests(text: string, options?: IAnsiEscapeConvertForTestsOptions): string;
+    static removeCodes(text: string): string;
+    }
+
+// @public
+export type Brand<T, BrandTag extends string> = T & {
+    __brand: BrandTag;
+};
+
 // @beta
 export class Colors {
     // (undocumented)
@@ -57,7 +68,6 @@ export class Colors {
     static magenta(text: string | IColorableSequence): IColorableSequence;
     // (undocumented)
     static magentaBackground(text: string | IColorableSequence): IColorableSequence;
-    static normalizeColorTokensForTest(text: string): string;
     // @internal
     static _normalizeStringOrColorableSequence(value: string | IColorableSequence): IColorableSequence;
     // (undocumented)
@@ -157,6 +167,7 @@ export class FileSystem {
     static ensureFolder(folderPath: string): void;
     static ensureFolderAsync(folderPath: string): Promise<void>;
     static exists(path: string): boolean;
+    static existsAsync(path: string): Promise<boolean>;
     static formatPosixModeBits(modeBits: PosixModeBits): string;
     static getLinkStatistics(path: string): FileSystemStats;
     static getLinkStatisticsAsync(path: string): Promise<FileSystemStats>;
@@ -198,7 +209,8 @@ export type FileSystemStats = fs.Stats;
 // @public
 export class FileWriter {
     close(): void;
-    static open(path: string, flags?: IFileWriterFlags): FileWriter;
+    readonly filePath: string;
+    static open(filePath: string, flags?: IFileWriterFlags): FileWriter;
     write(text: string): void;
 }
 
@@ -206,6 +218,11 @@ export class FileWriter {
 export const enum FolderConstants {
     Git = ".git",
     NodeModules = "node_modules"
+}
+
+// @public
+export interface IAnsiEscapeConvertForTestsOptions {
+    encodeNewlines?: boolean;
 }
 
 // @beta (undocumented)
@@ -671,6 +688,7 @@ export class Text {
     static convertToCrLf(input: string): string;
     static convertToLf(input: string): string;
     static ensureTrailingNewline(s: string, newlineKind?: NewlineKind): string;
+    static getNewline(newlineKind: NewlineKind): string;
     static padEnd(s: string, minimumLength: number, paddingCharacter?: string): string;
     static padStart(s: string, minimumLength: number, paddingCharacter?: string): string;
     static replaceAll(input: string, searchValue: string, replaceValue: string): string;
