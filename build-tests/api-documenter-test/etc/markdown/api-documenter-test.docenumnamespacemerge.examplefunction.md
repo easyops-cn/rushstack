@@ -6,13 +6,13 @@
 
 This is a function inside of a namespace that merges with an enum.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 function exampleFunction(): void;
 ```
 
-<b>Returns:</b>
+**Returns:**
 
 void
 

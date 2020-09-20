@@ -2,10 +2,10 @@
 
 [Home](./index.md) &gt; [api-documenter-test](./api-documenter-test.md) &gt; [TypeAlias](./api-documenter-test.typealias.md)
 
-## TypeAlias type
+## TypeAlias interface
 
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type TypeAlias = number;

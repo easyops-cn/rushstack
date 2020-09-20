@@ -2,10 +2,10 @@
 
 [Home](./index.md) &gt; [api-documenter-test](./api-documenter-test.md) &gt; [GenericTypeAlias](./api-documenter-test.generictypealias.md)
 
-## GenericTypeAlias type
+## GenericTypeAlias interface
 
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type GenericTypeAlias<T> = T[];

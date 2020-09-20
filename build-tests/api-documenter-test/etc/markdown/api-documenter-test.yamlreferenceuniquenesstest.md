@@ -5,13 +5,13 @@
 ## yamlReferenceUniquenessTest() function
 
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function yamlReferenceUniquenessTest(): IDocInterface1;
 ```
 
-<b>Returns:</b>
+**Returns:**
 
 [IDocInterface1](./api-documenter-test.idocinterface1.md)
 

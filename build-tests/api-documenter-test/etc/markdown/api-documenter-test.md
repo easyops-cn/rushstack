@@ -37,12 +37,15 @@ This project tests various documentation generation scenarios and doc comment sy
 |  Interface | Description |
 |  --- | --- |
 |  [DocClassInterfaceMerge](./api-documenter-test.docclassinterfacemerge.md) | Interface that merges with class |
+|  [ExampleTypeAlias](./api-documenter-test.exampletypealias.md) | A type alias |
+|  [GenericTypeAlias](./api-documenter-test.generictypealias.md) |  |
 |  [IDocInterface1](./api-documenter-test.idocinterface1.md) |  |
 |  [IDocInterface2](./api-documenter-test.idocinterface2.md) |  |
 |  [IDocInterface3](./api-documenter-test.idocinterface3.md) | Some less common TypeScript declaration kinds. |
 |  [IDocInterface4](./api-documenter-test.idocinterface4.md) | Type union in an interface. |
 |  [IDocInterface5](./api-documenter-test.idocinterface5.md) | Interface without inline tag to test custom TOC |
 |  [IDocInterface6](./api-documenter-test.idocinterface6.md) | Interface without inline tag to test custom TOC with injection |
+|  [TypeAlias](./api-documenter-test.typealias.md) |  |
 
 ## Namespaces
 
@@ -57,12 +60,4 @@ This project tests various documentation generation scenarios and doc comment sy
 |  Variable | Description |
 |  --- | --- |
 |  [constVariable](./api-documenter-test.constvariable.md) | An exported variable declaration. |
-
-## Type Aliases
-
-|  Type Alias | Description |
-|  --- | --- |
-|  [ExampleTypeAlias](./api-documenter-test.exampletypealias.md) | A type alias |
-|  [GenericTypeAlias](./api-documenter-test.generictypealias.md) |  |
-|  [TypeAlias](./api-documenter-test.typealias.md) |  |
 

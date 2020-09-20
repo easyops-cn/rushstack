@@ -9,13 +9,13 @@
 > Use `otherThing()` instead.
 > 
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 deprecatedExample(): void;
 ```
 
-<b>Returns:</b>
+**Returns:**
 
 void
 

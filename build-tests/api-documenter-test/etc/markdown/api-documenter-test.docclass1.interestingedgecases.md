@@ -8,13 +8,13 @@ Example: "<!-- -->{ \\<!-- -->"maxItemsToShow<!-- -->\\<!-- -->": 123 }<!-- -->"
 
 The regular expression used to validate the constraints is /^\[a-zA-Z0-9<!-- -->\\<!-- -->-\_\]+$/
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 interestingEdgeCases(): void;
 ```
 
-<b>Returns:</b>
+**Returns:**
 
 void
 
