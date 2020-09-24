@@ -38,7 +38,8 @@ import {
   ApiNamespace,
   ExcerptTokenKind,
   IResolveDeclarationReferenceResult,
-  ApiTypeAlias
+  ApiTypeAlias,
+  ApiVariable
 } from '@microsoft/api-extractor-model';
 
 import { CustomDocNodes } from '../nodes/CustomDocNodeKind';
@@ -361,48 +362,57 @@ export class MarkdownDocumenter {
     }
 
     if (apiItem instanceof ApiTypeAlias) {
-      const tags: DocLinkTag[] = [];
-      for (const token of apiItem.typeExcerpt.spannedTokens) {
-        if (token.kind === ExcerptTokenKind.Reference && token.canonicalReference) {
-          const unwrappedTokenText: string = token.text.replace(/[\r\n]+/g, ' ');
+      this._writeReference(output, apiItem.typeExcerpt);
+    }
 
-          const apiItemResult: IResolveDeclarationReferenceResult = this._apiModel.resolveDeclarationReference(
-            token.canonicalReference,
-            undefined
-          );
+    if (apiItem instanceof ApiVariable) {
+      this._writeReference(output, apiItem.variableTypeExcerpt);
+    }
+  }
 
-          if (apiItemResult.resolvedApiItem) {
-            const urlDestination = this._getLinkFilenameForApiItem(apiItemResult.resolvedApiItem);
-            if (!tags.some((tag) => tag.urlDestination === urlDestination)) {
-              tags.push(
-                new DocLinkTag({
-                  configuration,
-                  tagName: '@link',
-                  linkText: unwrappedTokenText,
-                  urlDestination
-                })
-              );
-            }
+  private _writeReference(output: DocSection, excerpt: Excerpt): void {
+    const configuration: TSDocConfiguration = this._tsdocConfiguration;
+    const tags: DocLinkTag[] = [];
+    for (const token of excerpt.spannedTokens) {
+      if (token.kind === ExcerptTokenKind.Reference && token.canonicalReference) {
+        const unwrappedTokenText: string = token.text.replace(/[\r\n]+/g, ' ');
+
+        const apiItemResult: IResolveDeclarationReferenceResult = this._apiModel.resolveDeclarationReference(
+          token.canonicalReference,
+          undefined
+        );
+
+        if (apiItemResult.resolvedApiItem) {
+          const urlDestination: string = this._getLinkFilenameForApiItem(apiItemResult.resolvedApiItem);
+          if (!tags.some((tag) => tag.urlDestination === urlDestination)) {
+            tags.push(
+              new DocLinkTag({
+                configuration,
+                tagName: '@link',
+                linkText: unwrappedTokenText,
+                urlDestination
+              })
+            );
           }
         }
       }
+    }
 
-      if (tags.length > 0) {
-        const extendsParagraph: DocParagraph = new DocParagraph({ configuration }, [
-          new DocEmphasisSpan({ configuration, bold: true }, [
-            new DocPlainText({ configuration, text: 'Reference: ' })
-          ])
-        ]);
-        let needsComma: boolean = false;
-        for (const tag of tags) {
-          if (needsComma) {
-            extendsParagraph.appendNode(new DocPlainText({ configuration, text: ', ' }));
-          }
-          extendsParagraph.appendNode(tag);
-          needsComma = true;
+    if (tags.length > 0) {
+      const extendsParagraph: DocParagraph = new DocParagraph({ configuration }, [
+        new DocEmphasisSpan({ configuration, bold: true }, [
+          new DocPlainText({ configuration, text: 'Reference: ' })
+        ])
+      ]);
+      let needsComma: boolean = false;
+      for (const tag of tags) {
+        if (needsComma) {
+          extendsParagraph.appendNode(new DocPlainText({ configuration, text: ', ' }));
         }
-        output.appendNode(extendsParagraph);
+        extendsParagraph.appendNode(tag);
+        needsComma = true;
       }
+      output.appendNode(extendsParagraph);
     }
   }
 
