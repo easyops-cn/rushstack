@@ -5,10 +5,11 @@ import { ApiDocumenterCommandLine } from './ApiDocumenterCommandLine';
 import { BaseAction } from './BaseAction';
 import { MarkdownDocumenter } from '../documenters/MarkdownDocumenter';
 import { ApiModel } from '@microsoft/api-extractor-model';
-import { CommandLineFlagParameter } from '@rushstack/ts-command-line';
+import { CommandLineFlagParameter, CommandLineStringParameter } from '@rushstack/ts-command-line';
 
 export class MarkdownAction extends BaseAction {
   private _frontMatterParameter: CommandLineFlagParameter;
+  private _breadcrumbHomeParameter: CommandLineStringParameter;
 
   public constructor(parser: ApiDocumenterCommandLine) {
     super({
@@ -28,17 +29,22 @@ export class MarkdownAction extends BaseAction {
       parameterLongName: '--front-matter',
       description: `Enables front matter in markdown`
     });
+
+    this._breadcrumbHomeParameter = this.defineStringParameter({
+      parameterLongName: '--breadcrumb-home',
+      argumentName: 'HOME',
+      description: `Specifies the breadcrumb home display name.` + ` If omitted, the default is "Home"`
+    });
   }
 
   protected onExecute(): Promise<void> {
     // override
     const apiModel: ApiModel = this.buildApiModel();
 
-    const markdownDocumenter: MarkdownDocumenter = new MarkdownDocumenter(
-      apiModel,
-      undefined,
-      this._frontMatterParameter.value
-    );
+    const markdownDocumenter: MarkdownDocumenter = new MarkdownDocumenter(apiModel, undefined, {
+      enableFrontMatter: this._frontMatterParameter.value,
+      breadcrumbHome: this._breadcrumbHomeParameter.value
+    });
     markdownDocumenter.generateFiles(this.outputFolder);
     return Promise.resolve();
   }

@@ -71,15 +71,20 @@ export class MarkdownDocumenter {
   private _outputFolder: string;
   private readonly _pluginLoader: PluginLoader;
   private readonly _enableFrontMatter: boolean | undefined;
+  private readonly _breadcrumbHome: string | undefined;
 
   public constructor(
     apiModel: ApiModel,
     documenterConfig: DocumenterConfig | undefined,
-    enableFrontMatter?: boolean
+    options?: {
+      enableFrontMatter?: boolean;
+      breadcrumbHome?: string;
+    }
   ) {
     this._apiModel = apiModel;
     this._documenterConfig = documenterConfig;
-    this._enableFrontMatter = enableFrontMatter;
+    this._enableFrontMatter = options ? options.enableFrontMatter : undefined;
+    this._breadcrumbHome = options ? options.breadcrumbHome : undefined;
     this._tsdocConfiguration = CustomDocNodes.configuration;
     this._markdownEmitter = new CustomMarkdownEmitter(this._apiModel);
 
@@ -1022,7 +1027,7 @@ export class MarkdownDocumenter {
       new DocLinkTag({
         configuration: this._tsdocConfiguration,
         tagName: '@link',
-        linkText: 'Home',
+        linkText: this._breadcrumbHome || 'Home',
         urlDestination: this._getLinkFilenameForApiItem(this._apiModel)
       })
     );
