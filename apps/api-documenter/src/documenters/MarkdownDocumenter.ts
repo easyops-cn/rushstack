@@ -37,7 +37,8 @@ import {
   ApiDeclaredItem,
   ApiNamespace,
   ExcerptTokenKind,
-  IResolveDeclarationReferenceResult
+  IResolveDeclarationReferenceResult,
+  ApiTypeAlias
 } from '@microsoft/api-extractor-model';
 
 import { CustomDocNodes } from '../nodes/CustomDocNodeKind';
@@ -353,6 +354,51 @@ export class MarkdownDocumenter {
             extendsParagraph.appendNode(new DocPlainText({ configuration, text: ', ' }));
           }
           this._appendExcerptWithHyperlinks(extendsParagraph, extendsType.excerpt);
+          needsComma = true;
+        }
+        output.appendNode(extendsParagraph);
+      }
+    }
+
+    if (apiItem instanceof ApiTypeAlias) {
+      const tags: DocLinkTag[] = [];
+      for (const token of apiItem.typeExcerpt.spannedTokens) {
+        if (token.kind === ExcerptTokenKind.Reference && token.canonicalReference) {
+          const unwrappedTokenText: string = token.text.replace(/[\r\n]+/g, ' ');
+
+          const apiItemResult: IResolveDeclarationReferenceResult = this._apiModel.resolveDeclarationReference(
+            token.canonicalReference,
+            undefined
+          );
+
+          if (apiItemResult.resolvedApiItem) {
+            const urlDestination = this._getLinkFilenameForApiItem(apiItemResult.resolvedApiItem);
+            if (!tags.some((tag) => tag.urlDestination === urlDestination)) {
+              tags.push(
+                new DocLinkTag({
+                  configuration,
+                  tagName: '@link',
+                  linkText: unwrappedTokenText,
+                  urlDestination
+                })
+              );
+            }
+          }
+        }
+      }
+
+      if (tags.length > 0) {
+        const extendsParagraph: DocParagraph = new DocParagraph({ configuration }, [
+          new DocEmphasisSpan({ configuration, bold: true }, [
+            new DocPlainText({ configuration, text: 'Reference: ' })
+          ])
+        ]);
+        let needsComma: boolean = false;
+        for (const tag of tags) {
+          if (needsComma) {
+            extendsParagraph.appendNode(new DocPlainText({ configuration, text: ', ' }));
+          }
+          extendsParagraph.appendNode(tag);
           needsComma = true;
         }
         output.appendNode(extendsParagraph);
