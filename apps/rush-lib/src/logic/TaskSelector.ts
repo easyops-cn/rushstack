@@ -28,7 +28,6 @@ export interface ITaskSelectorConstructor {
  */
 export class TaskSelector {
   private _taskCollection: TaskCollection;
-  private _dependentList: Map<string, Set<RushConfigurationProject>>;
   private _options: ITaskSelectorConstructor;
   private _packageChangeAnalyzer: PackageChangeAnalyzer;
 
@@ -36,9 +35,7 @@ export class TaskSelector {
     this._options = options;
 
     this._packageChangeAnalyzer = new PackageChangeAnalyzer(options.rushConfiguration);
-    this._taskCollection = new TaskCollection({
-      quietMode: options.isQuietMode
-    });
+    this._taskCollection = new TaskCollection();
   }
 
   public registerTasks(): TaskCollection {
@@ -79,11 +76,11 @@ export class TaskSelector {
   }
 
   private _registerFromProjects(fromProjects: ReadonlyArray<RushConfigurationProject>): void {
-    this._buildDependentGraph();
+    const dependentList: Map<string, Set<RushConfigurationProject>> = this._getDependentGraph();
     const dependents: Map<string, RushConfigurationProject> = new Map<string, RushConfigurationProject>();
 
     for (const fromProject of fromProjects) {
-      this._collectAllDependents(fromProject, dependents);
+      this._collectAllDependents(dependentList, fromProject, dependents);
     }
 
     // Register all downstream dependents
@@ -142,14 +139,15 @@ export class TaskSelector {
    * Collects all downstream dependents of a certain project
    */
   private _collectAllDependents(
+    dependentList: Map<string, Set<RushConfigurationProject>>,
     project: RushConfigurationProject,
     result: Map<string, RushConfigurationProject>
   ): void {
     if (!result.has(project.packageName)) {
       result.set(project.packageName, project);
 
-      for (const dependent of this._dependentList.get(project.packageName) || []) {
-        this._collectAllDependents(dependent, result);
+      for (const dependent of dependentList.get(project.packageName) || []) {
+        this._collectAllDependents(dependentList, dependent, result);
       }
     }
   }
@@ -157,18 +155,23 @@ export class TaskSelector {
   /**
    * Inverts the localLinks to arrive at the dependent graph. This helps when using the --from flag
    */
-  private _buildDependentGraph(): void {
-    this._dependentList = new Map<string, Set<RushConfigurationProject>>();
+  private _getDependentGraph(): Map<string, Set<RushConfigurationProject>> {
+    const dependentList: Map<string, Set<RushConfigurationProject>> = new Map<
+      string,
+      Set<RushConfigurationProject>
+    >();
 
     for (const project of this._options.rushConfiguration.projects) {
       for (const { packageName } of project.localDependencyProjects) {
-        if (!this._dependentList.has(packageName)) {
-          this._dependentList.set(packageName, new Set<RushConfigurationProject>());
+        if (!dependentList.has(packageName)) {
+          dependentList.set(packageName, new Set<RushConfigurationProject>());
         }
 
-        this._dependentList.get(packageName)!.add(project);
+        dependentList.get(packageName)!.add(project);
       }
     }
+
+    return dependentList;
   }
 
   private _registerTask(project: RushConfigurationProject | undefined): void {

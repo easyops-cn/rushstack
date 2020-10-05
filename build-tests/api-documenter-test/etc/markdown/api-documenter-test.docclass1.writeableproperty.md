@@ -4,10 +4,11 @@
 
 ## DocClass1.writeableProperty property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 get writeableProperty(): string;
 
 set writeableProperty(value: string);
 ```
+

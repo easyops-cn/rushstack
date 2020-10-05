@@ -6,8 +6,9 @@
 
 This event should have been marked as readonly.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 malformedEvent: SystemEvent;
 ```
+

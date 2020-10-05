@@ -4,8 +4,9 @@
 
 ## DocClass1.readonlyProperty property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 get readonlyProperty(): string;
 ```
+

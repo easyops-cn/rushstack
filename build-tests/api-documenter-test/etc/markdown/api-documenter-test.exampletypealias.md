@@ -2,12 +2,13 @@
 
 [Home](./index.md) &gt; [api-documenter-test](./api-documenter-test.md) &gt; [ExampleTypeAlias](./api-documenter-test.exampletypealias.md)
 
-## ExampleTypeAlias type
+## ExampleTypeAlias interface
 
 A type alias
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type ExampleTypeAlias = Promise<boolean>;
 ```
+

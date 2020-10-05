@@ -6,8 +6,9 @@
 
 The simple constructor for `DocBaseClass`
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 constructor();
 ```
+

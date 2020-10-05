@@ -6,8 +6,9 @@
 
 This is a regular property that happens to use the SystemEvent type.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 regularProperty: SystemEvent;
 ```
+

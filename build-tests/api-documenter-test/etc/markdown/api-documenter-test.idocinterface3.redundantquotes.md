@@ -6,8 +6,9 @@
 
 A quoted identifier with redundant quotes.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 "redundantQuotes": string;
 ```
+

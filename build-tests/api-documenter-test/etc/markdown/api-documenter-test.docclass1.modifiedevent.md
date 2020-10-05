@@ -6,8 +6,9 @@
 
 This event is fired whenever the object is modified.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 readonly modifiedEvent: SystemEvent;
 ```
+

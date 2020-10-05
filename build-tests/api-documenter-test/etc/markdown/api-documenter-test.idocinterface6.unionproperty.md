@@ -4,8 +4,9 @@
 
 ## IDocInterface6.unionProperty property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 unionProperty: IDocInterface1 | IDocInterface2;
 ```
+

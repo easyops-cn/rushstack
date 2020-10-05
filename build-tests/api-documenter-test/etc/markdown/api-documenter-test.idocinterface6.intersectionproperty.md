@@ -4,8 +4,9 @@
 
 ## IDocInterface6.intersectionProperty property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 intersectionProperty: IDocInterface1 & IDocInterface2;
 ```
+

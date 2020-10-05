@@ -5,10 +5,10 @@
 ## IDocInterface1 interface
 
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
-export interface IDocInterface1 
+export interface IDocInterface1
 ```
 
 ## Properties

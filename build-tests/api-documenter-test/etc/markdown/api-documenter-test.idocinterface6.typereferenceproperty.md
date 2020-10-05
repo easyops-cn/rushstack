@@ -4,8 +4,9 @@
 
 ## IDocInterface6.typeReferenceProperty property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 typeReferenceProperty: Generic<IDocInterface1>;
 ```
+

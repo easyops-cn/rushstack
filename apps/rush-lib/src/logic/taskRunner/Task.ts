@@ -1,7 +1,8 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
 // See LICENSE in the project root for license information.
 
-import { ITaskWriter } from '@rushstack/stream-collator';
+import { StdioSummarizer } from '@rushstack/terminal';
+import { CollatedWriter } from '@rushstack/stream-collator';
 
 import { Stopwatch } from '../../utilities/Stopwatch';
 import { TaskStatus } from './TaskStatus';
@@ -32,12 +33,12 @@ export class Task {
    * A set of all dependencies which must be executed before this task is complete.
    * When dependencies finish execution, they are removed from this list.
    */
-  public dependencies: Set<Task>;
+  public dependencies: Set<Task> = new Set<Task>();
 
   /**
    * The inverse of dependencies, lists all projects which are directly dependent on this one.
    */
-  public dependents: Set<Task>;
+  public dependents: Set<Task> = new Set<Task>();
 
   /**
    * This number represents how far away this Task is from the furthest "root" project (i.e.
@@ -79,12 +80,19 @@ export class Task {
   /**
    * The task writer which contains information from the output streams of this task
    */
-  public writer: ITaskWriter;
+  public collatedWriter!: CollatedWriter;
+
+  public stdioSummarizer!: StdioSummarizer;
 
   /**
    * The stopwatch which measures how long it takes the task to execute
    */
-  public stopwatch: Stopwatch;
+  public stopwatch!: Stopwatch;
+
+  public constructor(builder: BaseBuilder, initialStatus: TaskStatus) {
+    this.builder = builder;
+    this.status = initialStatus;
+  }
 
   public get name(): string {
     return this.builder.name;

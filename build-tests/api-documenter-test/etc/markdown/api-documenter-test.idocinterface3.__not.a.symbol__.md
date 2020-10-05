@@ -6,8 +6,9 @@
 
 An identifier that does need quotes. It misleadingly looks like an ECMAScript symbol.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 "[not.a.symbol]": string;
 ```
+

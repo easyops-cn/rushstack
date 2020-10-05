@@ -1,38 +1,33 @@
 // Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
 // See LICENSE in the project root for license information.
 
-import * as path from 'path';
-import { Terminal, InternalError, FileSystem, Import } from '@rushstack/node-core-library';
-import { InheritanceType, PathResolutionMethod, ConfigurationFile } from '@rushstack/heft-config-file';
+import { Terminal, InternalError, Import } from '@rushstack/node-core-library';
 
 import { HeftConfiguration } from '../configuration/HeftConfiguration';
 import { IHeftPlugin } from './IHeftPlugin';
 import { InternalHeftSession } from './InternalHeftSession';
 import { HeftSession } from './HeftSession';
+import {
+  CoreConfigFiles,
+  IHeftConfigurationJsonPluginSpecifier,
+  IHeftConfigurationJson
+} from '../utilities/CoreConfigFiles';
 
 // Default plugins
 import { TypeScriptPlugin } from '../plugins/TypeScriptPlugin/TypeScriptPlugin';
-import { RushJsonConfigurationFilesPlugin } from '../plugins/JsonConfigurationLoaders/RushJsonConfigurationFilesPlugin';
-import { ProjectJsonConfigurationFilesPlugin } from '../plugins/JsonConfigurationLoaders/ProjectJsonConfigurationFilesPlugin';
-import { CleanPlugin } from '../plugins/CleanPlugin';
+import { DeleteGlobsPlugin } from '../plugins/DeleteGlobsPlugin';
 import { CopyStaticAssetsPlugin } from '../plugins/CopyStaticAssetsPlugin';
-import { PackageJsonConfigurationPlugin } from '../plugins/PackageJsonConfigurationPlugin';
 import { ApiExtractorPlugin } from '../plugins/ApiExtractorPlugin/ApiExtractorPlugin';
 import { JestPlugin } from '../plugins/JestPlugin/JestPlugin';
 import { BasicConfigureWebpackPlugin } from '../plugins/Webpack/BasicConfigureWebpackPlugin';
 import { WebpackPlugin } from '../plugins/Webpack/WebpackPlugin';
+import { SassTypingsPlugin } from '../plugins/SassTypingsPlugin/SassTypingsPlugin';
+import { ProjectValidatorPlugin } from '../plugins/ProjectValidatorPlugin';
 
 export interface IPluginManagerOptions {
   terminal: Terminal;
   heftConfiguration: HeftConfiguration;
   internalHeftSession: InternalHeftSession;
-}
-
-interface IPluginConfigurationJson {
-  plugins: {
-    plugin: string;
-    options?: object;
-  }[];
 }
 
 export class PluginManager {
@@ -50,15 +45,14 @@ export class PluginManager {
 
   public initializeDefaultPlugins(): void {
     this._applyPlugin(new TypeScriptPlugin());
-    this._applyPlugin(new RushJsonConfigurationFilesPlugin());
-    this._applyPlugin(new ProjectJsonConfigurationFilesPlugin());
     this._applyPlugin(new CopyStaticAssetsPlugin());
-    this._applyPlugin(new CleanPlugin());
-    this._applyPlugin(new PackageJsonConfigurationPlugin());
+    this._applyPlugin(new DeleteGlobsPlugin());
     this._applyPlugin(new ApiExtractorPlugin());
     this._applyPlugin(new JestPlugin());
     this._applyPlugin(new BasicConfigureWebpackPlugin());
     this._applyPlugin(new WebpackPlugin());
+    this._applyPlugin(new SassTypingsPlugin());
+    this._applyPlugin(new ProjectValidatorPlugin());
   }
 
   public initializePlugin(pluginSpecifier: string, options?: object): void {
@@ -67,33 +61,18 @@ export class PluginManager {
   }
 
   public async initializePluginsFromConfigFileAsync(): Promise<void> {
-    try {
-      const pluginConfigFilePath: string = path.join(
-        this._heftConfiguration.projectHeftDataFolder,
-        'plugins.json'
-      );
-      const schemaPath: string = path.join(__dirname, '..', 'schemas', 'plugins.schema.json');
-      const pluginConfigFileLoader: ConfigurationFile<IPluginConfigurationJson> = new ConfigurationFile<
-        IPluginConfigurationJson
-      >(schemaPath, {
-        propertyInheritanceTypes: { plugins: InheritanceType.append },
-        jsonPathMetadata: {
-          '$.plugins.*.plugin': {
-            pathResolutionMethod: PathResolutionMethod.NodeResolve
-          }
-        }
-      });
-      const pluginConfigurationJson: IPluginConfigurationJson = await pluginConfigFileLoader.loadConfigurationFileAsync(
-        pluginConfigFilePath
-      );
+    const heftConfigurationJson:
+      | IHeftConfigurationJson
+      | undefined = await CoreConfigFiles.heftConfigFileLoader.tryLoadConfigurationFileForProjectAsync(
+      this._heftConfiguration.globalTerminal,
+      this._heftConfiguration.buildFolder,
+      this._heftConfiguration.rigConfig
+    );
+    const heftPluginSpecifiers: IHeftConfigurationJsonPluginSpecifier[] =
+      heftConfigurationJson?.heftPlugins || [];
 
-      for (const pluginSpecifier of pluginConfigurationJson.plugins) {
-        this._initializeResolvedPlugin(pluginSpecifier.plugin, pluginSpecifier.options);
-      }
-    } catch (e) {
-      if (!FileSystem.isNotExistError(e)) {
-        throw e;
-      }
+    for (const pluginSpecifier of heftPluginSpecifiers) {
+      this._initializeResolvedPlugin(pluginSpecifier.plugin, pluginSpecifier.options);
     }
   }
 
@@ -152,8 +131,8 @@ export class PluginManager {
 
     if (!pluginPackage.pluginName || typeof pluginPackage.pluginName !== 'string') {
       throw new InternalError(
-        `Plugin packages must define a "displayName" property. The plugin loaded from "${resolvedPluginPath}" ` +
-          'either doesn\'t define a "displayName" property, or its value isn\'t a string.'
+        `Plugin packages must define a "pluginName" property. The plugin loaded from "${resolvedPluginPath}" ` +
+          'either doesn\'t define a "pluginName" property, or its value isn\'t a string.'
       );
     }
 

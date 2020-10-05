@@ -6,10 +6,10 @@
 
 A top-level namespace
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
-export declare namespace OuterNamespace 
+export declare namespace OuterNamespace
 ```
 
 ## Namespaces

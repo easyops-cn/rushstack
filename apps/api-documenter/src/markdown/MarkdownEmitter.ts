@@ -247,19 +247,19 @@ export class MarkdownEmitter {
       }
 
       if (context.boldRequested) {
-        writer.write('<b>');
+        writer.write('**');
       }
       if (context.italicRequested) {
-        writer.write('<i>');
+        writer.write('*');
       }
 
       writer.write(this.getEscapedText(middle));
 
       if (context.italicRequested) {
-        writer.write('</i>');
+        writer.write('*');
       }
       if (context.boldRequested) {
-        writer.write('</b>');
+        writer.write('**');
       }
     }
 

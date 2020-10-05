@@ -4,8 +4,9 @@
 
 ## IDocInterface6.tupleProperty property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 tupleProperty: [IDocInterface1, IDocInterface2];
 ```
+

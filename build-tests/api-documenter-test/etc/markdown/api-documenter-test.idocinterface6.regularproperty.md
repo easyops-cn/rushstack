@@ -6,8 +6,9 @@
 
 Property of type number that does something
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 regularProperty: number;
 ```
+
