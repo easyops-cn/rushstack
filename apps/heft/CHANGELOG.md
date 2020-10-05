@@ -1,6 +1,79 @@
 # Change Log - @rushstack/heft
 
-This log was last generated on Fri, 18 Sep 2020 22:57:24 GMT and should not be manually modified.
+This log was last generated on Fri, 02 Oct 2020 00:10:59 GMT and should not be manually modified.
+
+## 0.15.2
+Fri, 02 Oct 2020 00:10:59 GMT
+
+### Patches
+
+- Include UPGRADING.md in npm package publish.
+
+## 0.15.1
+Thu, 01 Oct 2020 20:27:16 GMT
+
+_Version update only_
+
+## 0.15.0
+Thu, 01 Oct 2020 18:51:21 GMT
+
+### Minor changes
+
+- Add functionality to automatically generate typings for *.scss, *.sass, and *.css files.
+
+## 0.14.1
+Wed, 30 Sep 2020 18:39:17 GMT
+
+### Patches
+
+- Update to build with @rushstack/heft-node-rig
+- Reclassify compiler messages TS2564 and TS7053 as warnings instead of errors
+- Print a warning if the API Extractor version is too old
+
+## 0.14.0
+Wed, 30 Sep 2020 06:53:53 GMT
+
+### Minor changes
+
+- (BREAKING CHANGE) Collapse copy-static-assets.json into typescript.json.
+- (BREAKING CHANGE) Move the config files from the ".heft" folder to the "config" folder and print a warning if an unexpected file is found in the ".heft" folder.
+- (BREAKING CHANGE) Consolidate the clean.json and plugins.json files into a new heft.json file.
+- (BREAKING CHANGE) Rename "emitFolderNameForJest" to "emitFolderNameForTests" in typescript.json
+- Heft now supports the config/rig.json system as defined by @rushstack/rig-package
+- Enable api-extractor.json to be provided by a rig package
+- Upgrade compiler; the API now requires TypeScript 3.9 or newer
+
+### Patches
+
+- Update README.md
+- Fix an issue where "heft build --help" printed incorrect help
+
+## 0.13.9
+Tue, 22 Sep 2020 05:45:56 GMT
+
+### Patches
+
+- Make the "plugins" field of "plugins.json" optional.
+
+## 0.13.8
+Tue, 22 Sep 2020 01:45:31 GMT
+
+_Version update only_
+
+## 0.13.7
+Tue, 22 Sep 2020 00:08:53 GMT
+
+_Version update only_
+
+## 0.13.6
+Sat, 19 Sep 2020 04:37:27 GMT
+
+_Version update only_
+
+## 0.13.5
+Sat, 19 Sep 2020 03:33:07 GMT
+
+_Version update only_
 
 ## 0.13.4
 Fri, 18 Sep 2020 22:57:24 GMT
@@ -51,7 +124,7 @@ Sun, 13 Sep 2020 01:53:20 GMT
 ## 0.11.1
 Fri, 11 Sep 2020 02:13:35 GMT
 
-*Version update only*
+_Version update only_
 
 ## 0.11.0
 Wed, 09 Sep 2020 03:29:01 GMT
@@ -137,12 +210,12 @@ Tue, 25 Aug 2020 00:10:12 GMT
 ## 0.6.6
 Mon, 24 Aug 2020 07:35:20 GMT
 
-*Version update only*
+_Version update only_
 
 ## 0.6.5
 Sat, 22 Aug 2020 05:55:42 GMT
 
-*Version update only*
+_Version update only_
 
 ## 0.6.4
 Fri, 21 Aug 2020 01:21:17 GMT
@@ -168,7 +241,7 @@ Thu, 20 Aug 2020 15:13:52 GMT
 ## 0.6.1
 Tue, 18 Aug 2020 23:59:42 GMT
 
-*Version update only*
+_Version update only_
 
 ## 0.6.0
 Tue, 18 Aug 2020 03:03:23 GMT
@@ -222,7 +295,7 @@ Thu, 13 Aug 2020 04:57:38 GMT
 ## 0.4.5
 Wed, 12 Aug 2020 00:10:05 GMT
 
-*Version update only*
+_Version update only_
 
 ## 0.4.4
 Tue, 11 Aug 2020 00:36:22 GMT
@@ -234,7 +307,7 @@ Tue, 11 Aug 2020 00:36:22 GMT
 ## 0.4.3
 Wed, 05 Aug 2020 18:27:33 GMT
 
-*Version update only*
+_Version update only_
 
 ## 0.4.2
 Tue, 04 Aug 2020 07:27:25 GMT

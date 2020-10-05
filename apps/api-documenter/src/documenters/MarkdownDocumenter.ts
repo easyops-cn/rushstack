@@ -59,6 +59,14 @@ import {
 import { DocumenterConfig } from './DocumenterConfig';
 import { MarkdownDocumenterAccessor } from '../plugin/MarkdownDocumenterAccessor';
 
+export interface IMarkdownDocumenterOptions {
+  apiModel: ApiModel;
+  documenterConfig: DocumenterConfig | undefined;
+  outputFolder: string;
+  enableFrontMatter?: boolean;
+  breadcrumbHome?: string;
+}
+
 /**
  * Renders API documentation in the Markdown file format.
  * For more info:  https://en.wikipedia.org/wiki/Markdown
@@ -68,37 +76,29 @@ export class MarkdownDocumenter {
   private readonly _documenterConfig: DocumenterConfig | undefined;
   private readonly _tsdocConfiguration: TSDocConfiguration;
   private readonly _markdownEmitter: CustomMarkdownEmitter;
-  private _outputFolder: string;
+  private readonly _outputFolder: string;
   private readonly _pluginLoader: PluginLoader;
   private readonly _enableFrontMatter: boolean | undefined;
   private readonly _breadcrumbHome: string | undefined;
 
-  public constructor(
-    apiModel: ApiModel,
-    documenterConfig: DocumenterConfig | undefined,
-    options?: {
-      enableFrontMatter?: boolean;
-      breadcrumbHome?: string;
-    }
-  ) {
-    this._apiModel = apiModel;
-    this._documenterConfig = documenterConfig;
-    this._enableFrontMatter = options ? options.enableFrontMatter : undefined;
-    this._breadcrumbHome = options ? options.breadcrumbHome : undefined;
+  public constructor(options: IMarkdownDocumenterOptions) {
+    this._apiModel = options.apiModel;
+    this._documenterConfig = options.documenterConfig;
+    this._outputFolder = options.outputFolder;
+    this._enableFrontMatter = options.enableFrontMatter;
+    this._breadcrumbHome = options.breadcrumbHome;
     this._tsdocConfiguration = CustomDocNodes.configuration;
     this._markdownEmitter = new CustomMarkdownEmitter(this._apiModel);
 
     this._pluginLoader = new PluginLoader();
   }
 
-  public generateFiles(outputFolder: string): void {
-    this._outputFolder = outputFolder;
-
+  public generateFiles(): void {
     if (this._documenterConfig) {
       this._pluginLoader.load(this._documenterConfig, () => {
         return new MarkdownDocumenterFeatureContext({
           apiModel: this._apiModel,
-          outputFolder: outputFolder,
+          outputFolder: this._outputFolder,
           documenter: new MarkdownDocumenterAccessor({
             getLinkForApiItem: (apiItem: ApiItem) => {
               return this._getLinkFilenameForApiItem(apiItem);

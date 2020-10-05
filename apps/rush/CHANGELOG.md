@@ -1,6 +1,23 @@
 # Change Log - @microsoft/rush
 
-This log was last generated on Thu, 17 Sep 2020 07:13:04 GMT and should not be manually modified.
+This log was last generated on Wed, 30 Sep 2020 21:04:15 GMT and should not be manually modified.
+
+## 5.34.3
+Wed, 30 Sep 2020 21:04:15 GMT
+
+### Updates
+
+- Update to build with @rushstack/heft-node-rig
+- Update README.md
+- Upgrade compiler; the API now requires TypeScript 3.9 or newer
+
+## 5.34.2
+Mon, 21 Sep 2020 22:00:03 GMT
+
+### Updates
+
+- Fix an issue where "rush build" output was lagged due to stream-collator not activating streams aggressively enough
+- Fix incorrect "successful" exit status code
 
 ## 5.34.1
 Thu, 17 Sep 2020 07:13:04 GMT
@@ -322,7 +339,7 @@ Tue, 28 Jan 2020 03:57:30 GMT
 ## 5.19.3
 Tue, 28 Jan 2020 01:35:53 GMT
 
-*Version update only*
+_Version update only_
 
 ## 5.19.2
 Tue, 28 Jan 2020 01:08:26 GMT
@@ -809,7 +826,7 @@ Wed, 22 Aug 2018 20:58:58 GMT
 ## 5.0.2
 Sat, 18 Aug 2018 01:27:39 GMT
 
-*Version update only*
+_Version update only_
 
 ## 5.0.1
 Sat, 18 Aug 2018 01:21:59 GMT
@@ -939,7 +956,7 @@ Thu, 18 Jan 2018 19:02:07 GMT
 ## 4.2.2
 Wed, 17 Jan 2018 10:49:31 GMT
 
-*Version update only*
+_Version update only_
 
 ## 4.2.1
 Fri, 12 Jan 2018 23:35:48 GMT
@@ -1194,7 +1211,7 @@ Fri, 24 Feb 2017 22:54:16 GMT
 ## 2.2.1
 Fri, 24 Feb 2017 22:53:18 GMT
 
-*Version update only*
+_Version update only_
 
 ## 2.2.0
 Fri, 24 Feb 2017 22:44:31 GMT
@@ -1412,5 +1429,5 @@ Sat, 03 Dec 2016 07:47:39 GMT
 
 ## 1.0.0
 
-*Initial release*
+_Initial release_
 

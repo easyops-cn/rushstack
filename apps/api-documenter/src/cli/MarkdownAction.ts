@@ -4,7 +4,6 @@
 import { ApiDocumenterCommandLine } from './ApiDocumenterCommandLine';
 import { BaseAction } from './BaseAction';
 import { MarkdownDocumenter } from '../documenters/MarkdownDocumenter';
-import { ApiModel } from '@microsoft/api-extractor-model';
 import { CommandLineFlagParameter, CommandLineStringParameter } from '@rushstack/ts-command-line';
 
 export class MarkdownAction extends BaseAction {
@@ -39,13 +38,16 @@ export class MarkdownAction extends BaseAction {
 
   protected onExecute(): Promise<void> {
     // override
-    const apiModel: ApiModel = this.buildApiModel();
+    const { apiModel, outputFolder } = this.buildApiModel();
 
-    const markdownDocumenter: MarkdownDocumenter = new MarkdownDocumenter(apiModel, undefined, {
+    const markdownDocumenter: MarkdownDocumenter = new MarkdownDocumenter({
+      apiModel,
+      documenterConfig: undefined,
+      outputFolder,
       enableFrontMatter: this._frontMatterParameter.value,
       breadcrumbHome: this._breadcrumbHomeParameter.value
     });
-    markdownDocumenter.generateFiles(this.outputFolder);
+    markdownDocumenter.generateFiles();
     return Promise.resolve();
   }
 }
