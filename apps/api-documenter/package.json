@@ -17,10 +17,10 @@
   "main": "lib/index.js",
   "typings": "dist/rollup.d.ts",
   "dependencies": {
-    "@microsoft/api-extractor-model": "workspace:*",
+    "@microsoft/api-extractor-model": "^7.10.1",
     "@microsoft/tsdoc": "0.12.19",
-    "@rushstack/node-core-library": "workspace:*",
-    "@rushstack/ts-command-line": "workspace:*",
+    "@rushstack/node-core-library": "^3.34.1",
+    "@rushstack/ts-command-line": "^4.7.1",
     "colors": "~1.2.1",
     "js-yaml": "~3.13.1",
     "resolve": "~1.17.0"
