@@ -2,6 +2,138 @@
   "name": "@microsoft/gulp-core-build-sass",
   "entries": [
     {
+      "version": "4.13.12",
+      "tag": "@microsoft/gulp-core-build-sass_v4.13.12",
+      "date": "Thu, 15 Oct 2020 00:59:08 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@microsoft/load-themed-styles\" to `1.10.113`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "4.13.11",
+      "tag": "@microsoft/gulp-core-build-sass_v4.13.11",
+      "date": "Wed, 14 Oct 2020 23:30:14 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@microsoft/load-themed-styles\" to `1.10.112`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "4.13.10",
+      "tag": "@microsoft/gulp-core-build-sass_v4.13.10",
+      "date": "Tue, 13 Oct 2020 15:11:28 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@microsoft/load-themed-styles\" to `1.10.111`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "4.13.9",
+      "tag": "@microsoft/gulp-core-build-sass_v4.13.9",
+      "date": "Mon, 12 Oct 2020 15:11:16 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@microsoft/load-themed-styles\" to `1.10.110`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "4.13.8",
+      "tag": "@microsoft/gulp-core-build-sass_v4.13.8",
+      "date": "Fri, 09 Oct 2020 15:11:08 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@microsoft/load-themed-styles\" to `1.10.109`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "4.13.7",
+      "tag": "@microsoft/gulp-core-build-sass_v4.13.7",
+      "date": "Tue, 06 Oct 2020 00:24:06 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@microsoft/gulp-core-build\" to `3.17.3`"
+          },
+          {
+            "comment": "Updating dependency \"@microsoft/load-themed-styles\" to `1.10.108`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/node-core-library\" to `3.34.3`"
+          },
+          {
+            "comment": "Updating dependency \"@microsoft/node-library-build\" to `6.5.4`"
+          },
+          {
+            "comment": "Updating dependency \"@microsoft/rush-stack-compiler-3.9\" to `0.4.26`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/eslint-config\" to `2.2.1`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "4.13.6",
+      "tag": "@microsoft/gulp-core-build-sass_v4.13.6",
+      "date": "Mon, 05 Oct 2020 22:36:57 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@microsoft/gulp-core-build\" to `3.17.2`"
+          },
+          {
+            "comment": "Updating dependency \"@microsoft/load-themed-styles\" to `1.10.107`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/node-core-library\" to `3.34.2`"
+          },
+          {
+            "comment": "Updating dependency \"@microsoft/node-library-build\" to `6.5.3`"
+          },
+          {
+            "comment": "Updating dependency \"@microsoft/rush-stack-compiler-3.9\" to `0.4.25`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/eslint-config\" to `2.2.0`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "4.13.5",
+      "tag": "@microsoft/gulp-core-build-sass_v4.13.5",
+      "date": "Mon, 05 Oct 2020 15:10:42 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@microsoft/load-themed-styles\" to `1.10.106`"
+          },
+          {
+            "comment": "Updating dependency \"@microsoft/node-library-build\" to `6.5.2`"
+          },
+          {
+            "comment": "Updating dependency \"@microsoft/rush-stack-compiler-3.9\" to `0.4.24`"
+          }
+        ]
+      }
+    },
+    {
       "version": "4.13.4",
       "tag": "@microsoft/gulp-core-build-sass_v4.13.4",
       "date": "Fri, 02 Oct 2020 00:10:59 GMT",

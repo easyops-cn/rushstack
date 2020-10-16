@@ -2,6 +2,186 @@
   "name": "@rushstack/localization-plugin",
   "entries": [
     {
+      "version": "0.3.79",
+      "tag": "@rushstack/localization-plugin_v0.3.79",
+      "date": "Thu, 15 Oct 2020 00:59:08 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@rushstack/typings-generator\" to `0.2.18`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/heft\" to `0.16.1`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/heft-node-rig\" to `0.1.6`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/set-webpack-public-path-plugin\" to `3.0.12`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/set-webpack-public-path-plugin\" from `^3.0.11` to `^3.0.12`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.3.78",
+      "tag": "@rushstack/localization-plugin_v0.3.78",
+      "date": "Wed, 14 Oct 2020 23:30:14 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@rushstack/heft\" to `0.16.0`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/set-webpack-public-path-plugin\" to `3.0.11`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/set-webpack-public-path-plugin\" from `^3.0.10` to `^3.0.11`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.3.77",
+      "tag": "@rushstack/localization-plugin_v0.3.77",
+      "date": "Tue, 13 Oct 2020 15:11:28 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@rushstack/heft\" to `0.15.8`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/set-webpack-public-path-plugin\" to `3.0.10`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/set-webpack-public-path-plugin\" from `^3.0.9` to `^3.0.10`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.3.76",
+      "tag": "@rushstack/localization-plugin_v0.3.76",
+      "date": "Mon, 12 Oct 2020 15:11:16 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@rushstack/heft\" to `0.15.7`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/set-webpack-public-path-plugin\" to `3.0.9`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/set-webpack-public-path-plugin\" from `^3.0.8` to `^3.0.9`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.3.75",
+      "tag": "@rushstack/localization-plugin_v0.3.75",
+      "date": "Fri, 09 Oct 2020 15:11:09 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@rushstack/heft\" to `0.15.6`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/set-webpack-public-path-plugin\" to `3.0.8`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/set-webpack-public-path-plugin\" from `^3.0.7` to `^3.0.8`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.3.74",
+      "tag": "@rushstack/localization-plugin_v0.3.74",
+      "date": "Tue, 06 Oct 2020 00:24:06 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@rushstack/node-core-library\" to `3.34.3`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/typings-generator\" to `0.2.17`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/eslint-config\" to `2.2.1`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/heft\" to `0.15.5`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/heft-node-rig\" to `0.1.5`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/set-webpack-public-path-plugin\" to `3.0.7`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/set-webpack-public-path-plugin\" from `^3.0.6` to `^3.0.7`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.3.73",
+      "tag": "@rushstack/localization-plugin_v0.3.73",
+      "date": "Mon, 05 Oct 2020 22:36:57 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@rushstack/node-core-library\" to `3.34.2`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/typings-generator\" to `0.2.16`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/eslint-config\" to `2.2.0`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/heft\" to `0.15.4`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/heft-node-rig\" to `0.1.4`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/set-webpack-public-path-plugin\" to `3.0.6`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/set-webpack-public-path-plugin\" from `^3.0.5` to `^3.0.6`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.3.72",
+      "tag": "@rushstack/localization-plugin_v0.3.72",
+      "date": "Mon, 05 Oct 2020 15:10:42 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@rushstack/typings-generator\" to `0.2.15`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/heft\" to `0.15.3`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/heft-node-rig\" to `0.1.3`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/set-webpack-public-path-plugin\" to `3.0.5`"
+          },
+          {
+            "comment": "Updating dependency \"@rushstack/set-webpack-public-path-plugin\" from `^3.0.4` to `^3.0.5`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.3.71",
       "tag": "@rushstack/localization-plugin_v0.3.71",
       "date": "Fri, 02 Oct 2020 00:10:59 GMT",

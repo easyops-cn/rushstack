@@ -1,6 +1,59 @@
 # Change Log - @rushstack/heft
 
-This log was last generated on Fri, 02 Oct 2020 00:10:59 GMT and should not be manually modified.
+This log was last generated on Thu, 15 Oct 2020 00:59:08 GMT and should not be manually modified.
+
+## 0.16.1
+Thu, 15 Oct 2020 00:59:08 GMT
+
+_Version update only_
+
+## 0.16.0
+Wed, 14 Oct 2020 23:30:14 GMT
+
+### Minor changes
+
+- (BREAKING CHANGE) Rename "includePaths" to "importIncludePaths" in sass.json.
+
+### Patches
+
+- Add an "exclude" option to sass.json.
+
+## 0.15.8
+Tue, 13 Oct 2020 15:11:28 GMT
+
+### Patches
+
+- Fix an issue where heftSession.debugMode isn't set properly.
+
+## 0.15.7
+Mon, 12 Oct 2020 15:11:16 GMT
+
+### Patches
+
+- Include additionalModuleKindsToEmit in the copy-static-assets plugin destination folders.
+- Throw if jest config file doesn't exist
+
+## 0.15.6
+Fri, 09 Oct 2020 15:11:08 GMT
+
+### Patches
+
+- Support relative imports in the Sass typings generator.
+
+## 0.15.5
+Tue, 06 Oct 2020 00:24:06 GMT
+
+_Version update only_
+
+## 0.15.4
+Mon, 05 Oct 2020 22:36:57 GMT
+
+_Version update only_
+
+## 0.15.3
+Mon, 05 Oct 2020 15:10:42 GMT
+
+_Version update only_
 
 ## 0.15.2
 Fri, 02 Oct 2020 00:10:59 GMT
