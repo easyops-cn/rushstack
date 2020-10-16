@@ -373,6 +373,10 @@ export class MarkdownDocumenter {
     if (apiItem instanceof ApiVariable) {
       this._writeReference(output, apiItem.variableTypeExcerpt);
     }
+
+    if (apiItem instanceof ApiPropertyItem) {
+      this._writeReference(output, apiItem.propertyTypeExcerpt);
+    }
   }
 
   private _writeReference(output: DocSection, excerpt: Excerpt): void {

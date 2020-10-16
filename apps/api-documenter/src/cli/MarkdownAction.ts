@@ -7,8 +7,8 @@ import { MarkdownDocumenter } from '../documenters/MarkdownDocumenter';
 import { CommandLineFlagParameter, CommandLineStringParameter } from '@rushstack/ts-command-line';
 
 export class MarkdownAction extends BaseAction {
-  private _frontMatterParameter: CommandLineFlagParameter;
-  private _breadcrumbHomeParameter: CommandLineStringParameter;
+  private _frontMatterParameter!: CommandLineFlagParameter;
+  private _breadcrumbHomeParameter!: CommandLineStringParameter;
 
   public constructor(parser: ApiDocumenterCommandLine) {
     super({
